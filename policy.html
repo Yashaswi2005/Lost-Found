@@ -1,0 +1,120 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <nav class="bg-black shadow-md">
+      <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold text-white">Home</a>
+      </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-8">Frequently Asked Questions</h1>
+
+      <div class="space-y-4">
+        <div class="faq bg-white p-4 rounded-lg shadow-md text-gray-800">
+          <button class="accordion flex justify-between items-center w-full text-left text-lg font-semibold">
+            <span>What is Lost & Found?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel mt-2 hidden">
+            <p class="text-gray-600">Lost & Found is a platform that helps users report lost items and allows finders to upload items they have found. The platform uses AI to match lost and found items, making it easier to reunite owners with their belongings.</p>
+          </div>
+        </div>
+
+        <div class="faq bg-white p-4 rounded-lg shadow-md text-gray-800">
+          <button class="accordion flex justify-between items-center w-full text-left text-lg font-semibold">
+            <span>How can I report a lost item?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel mt-2 hidden">
+            <p class="text-gray-600">You can report a lost item by signing up on our website, filling out a simple form with details of the lost item, and uploading a photo if possible. Our AI will help you find matches with items reported as found.</p>
+          </div>
+        </div>
+
+        <div class="faq bg-white p-4 rounded-lg shadow-md text-gray-800">
+          <button class="accordion flex justify-between items-center w-full text-left text-lg font-semibold">
+            <span>What do I do if I find an item?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel mt-2 hidden">
+            <p class="text-gray-600">If you find an item, simply create an account, report the found item, and upload photos. The platform will match the item with potential owners, making it easy to return the lost item.</p>
+          </div>
+        </div>
+
+        <div class="faq bg-white p-4 rounded-lg shadow-md text-gray-800">
+          <button class="accordion flex justify-between items-center w-full text-left text-lg font-semibold">
+            <span>What happens if I don’t claim my lost item within a certain time?
+            </span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel mt-2 hidden">
+            <p class="text-gray-600">If your lost item remains unclaimed for 6 months, it will be donated to verified charities, orphanages, or NGOs.</p>
+          </div>
+        </div>
+
+        <div class="faq bg-white p-4 rounded-lg shadow-md text-gray-800">
+          <button class="accordion flex justify-between items-center w-full text-left text-lg font-semibold">
+            <span>How does the AI matching system work?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel mt-2 hidden">
+            <p class="text-gray-600">Our AI scans the reports of lost and found items to automatically match items that share similar descriptions, photos, and other details. If a match is found, both parties are notified.</p>
+          </div>
+        </div>
+
+        <div class="faq bg-white p-4 rounded-lg shadow-md text-gray-800">
+          <button class="accordion flex justify-between items-center w-full text-left text-lg font-semibold">
+            <span>Can I claim my lost item if it’s found?
+            </span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel mt-2 hidden">
+            <p class="text-gray-600">Yes, if your lost item is matched and found by someone else, you will be notified. You can claim the item by providing proof of ownership. If you are unable to pick it up, we can arrange for a nationwide courier delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-black text-white py-6 mt-8">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-sm">&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var pannel = this.nextElementSibling;
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
