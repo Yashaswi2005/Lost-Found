@@ -1,0 +1,231 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Charity Auction Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="font-roboto bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-black text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo and Title -->
+            <div class="flex items-center space-x-4">
+                <img alt="Charity Auction House Logo" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/s5Cq4_Y2kRwum5Bk-lqnx2y8YVc3WVN1zaxW502wWJg.jpg" width="40"/>
+                <h1 class="text-2xl font-bold">Charity Auction House</h1>
+            </div>
+            <!-- Navigation Links for Desktop -->
+            <nav class="hidden md:flex space-x-4">
+                <a class="hover:underline" href="index.html">Home</a>
+                <a class="hover:underline" href="#auctions">Current Available</a>
+                <a class="hover:underline" href="policy.html">Policy</a>
+                <a class="hover:underline" href="contactus.html">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <nav class="bg-black p-4">
+                <a class="block py-2 hover:underline" href="index.html">Home</a>
+                <a class="block py-2 hover:underline" href="#auctions">Auctions</a>
+                <a class="block py-2 hover:underline" href="#">About</a>
+                <a class="block py-2 hover:underline" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="relative">
+        <img alt="Parallax background image of a charity event" class="w-full h-96 object-cover" height="400" src="parallax.jpeg" width="1920"/>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <!-- Current Unclaimed Section -->
+        <section class="mb-8" id="auctions">
+            <h2 class="text-3xl font-bold mb-4 text-blue-700">Current Unclaimed</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Unclaimed Item 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a vintage car up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/qyXhgmz1Sb4SSV8aoEc-CeYvQssGiU-ux-ZBh0mOAsc.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Vintage Car</h3>
+                        <p class="text-gray-700 mb-4">A beautiful vintage car in excellent condition.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Request for Free</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a rare painting up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/QEqfE4NauZUgC4MRBgjsBYu-4qP1B2Bo87fp8JSAsXo.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Rare Painting</h3>
+                        <p class="text-gray-700 mb-4">A rare painting by a famous artist.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Request for Free</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of an antique clock up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/ikv6rQl1Z1b21rTa9ptUGd-hz6tomVvG5B7-ocpTPnE.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Antique Clock</h3>
+                        <p class="text-gray-700 mb-4">An antique clock from the 19th century.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Request for Free</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a luxury watch up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/92bglUw_UdeagSq-BYaUNEqggiwjA_SkzTQJQGR8k6c.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Luxury Watch</h3>
+                        <p class="text-gray-700 mb-4">A luxury watch with a diamond-studded bezel.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Request for Free</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 5 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a classic guitar up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/o4q2UqyhirRuDXnB7eUzPcqj4aDIMtlp5yUgONP2HN4.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Classic Guitar</h3>
+                        <p class="text-gray-700 mb-4">A classic guitar in mint condition.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Request for Free</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 6 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a vintage typewriter up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/3CY-nV9JFPviV_Ko4l8PcuyjEO7D3bkchQa86GgoW18.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Vintage Typewriter</h3>
+                        <p class="text-gray-700 mb-4">A vintage typewriter in working condition.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Request for Free</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Unclaimed Section -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4 text-blue-700">Upcoming Unclaimed Items</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Unclaimed Item 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a vintage motorcycle up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/RMIWaheLq-wnc0Uq-1krBP7GC91qs_0lSEkHkJnUAhM.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Vintage Motorcycle</h3>
+                        <p class="text-gray-700 mb-4">A vintage motorcycle in excellent condition.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-gray-200 text-blue-700 font-bold p-2 rounded" id="countdown1">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a rare coin collection up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/PfxZRWDZEOPmSXdhhJ5bG9WOa6gE4HzskyLteY3SJPU.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Rare Coin Collection</h3>
+                        <p class="text-gray-700 mb-4">A collection of rare coins from around the world.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-gray-200 text-blue-700 font-bold p-2 rounded" id="countdown2">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a luxury handbag up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/c9A4OYhteBlGoss35DqzyWXIbrMcjgYC-HfnKyh8TpE.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Luxury Handbag</h3>
+                        <p class="text-gray-700 mb-4">A luxury handbag from a renowned designer.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-gray-200 text-blue-700 font-bold p-2 rounded" id="countdown3">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a classic vinyl record collection up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/5Ae0xBN5h2668FLWFP_G_PxxWnh_7K5EUH1v9SMvHdU.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Classic Vinyl Records</h3>
+                        <p class="text-gray-700 mb-4">A collection of classic vinyl records.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-gray-200 text-blue-700 font-bold p-2 rounded" id="countdown4">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 5 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a rare book collection up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/Vig893pBYIX6e4awryZW24hQFTL3fmJt0AyrfYkXST0.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Rare Book Collection</h3>
+                        <p class="text-gray-700 mb-4">A collection of rare books from various genres.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-gray-200 text-blue-700 font-bold p-2 rounded" id="countdown5">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Unclaimed Item 6 -->
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Image of a vintage jewelry set up for auction" class="w-full h-48 object-cover rounded-t-lg" height="300" src="https://storage.googleapis.com/a1aa/image/bZ4acVZSMANExu3fP1eYr0r0nlVOZ2P00Ezw7tri_UY.jpg" width="400"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Vintage Jewelry Set</h3>
+                        <p class="text-gray-700 mb-4">A vintage jewelry set with precious stones.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-gray-200 text-blue-700 font-bold p-2 rounded" id="countdown6">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+       <!-- Footer Section -->
+       <footer class="bg-black text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-4 mb-4">
+                <a class="hover:text-gray-300" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="hover:text-gray-300" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="hover:text-gray-300" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="hover:text-gray-300" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <!-- Copyright Information -->
+            <p class="mb-4">© 2023 Charity Auction House. All rights reserved.</p>
+            <!-- Lost & Found Section -->
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <h3 class="text-xl font-bold mb-2">Lost & Found</h3>
+                <p class="text-gray-300 mb-4">
+                    If you have lost or found an item, please contact us at
+                    <a class="text-blue-400 hover:underline" href="mailto:lostandfound@charityauctionhouse.com">lostandfound@charityauctionhouse.com</a>.
+                </p>
+            </div>
+        </div>
+    </footer> <!-- ✅ Fixed the missing closing tag here -->
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById("menu-button").addEventListener("click", function () {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>

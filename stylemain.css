@@ -1,0 +1,290 @@
+/* Carousel styles */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.carousel-item {
+    flex: none;
+    scroll-snap-align: start;
+    width: 100%;
+}
+.carousel-container {
+    position: relative;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Ensure carousel buttons stay above items */
+}
+.carousel-button.left {
+    left: 10px;
+}
+.carousel-button.right {
+    right: 10px;
+}
+
+/* Item container styles */
+.item-container {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 5; /* Ensure item containers stack properly */
+}
+.item-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* View details button styles */
+.view-details {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    z-index: 6; /* Ensure view details button stays on top */
+}
+.item-container:hover .view-details {
+    opacity: 1;
+    background-color: #333;
+    color: white;
+}
+
+/* Chat window styles */
+.chat-window {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s;
+    z-index: 9999; /* Ensure chat window stays above all elements */
+}
+.chat-window.open {
+    right: 0;
+}
+.chat-header {
+    background-color: #4a5568;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.chat-body {
+    padding: 10px;
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+.chat-footer {
+    padding: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Chatbot icon styles */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 9999; /* Ensure the chatbot icon stays on top */
+}
+
+/* Chatbot window styles */
+.chatbot-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 9999; /* Ensure chatbot window stays on top */
+}
+
+/* Chatbot header */
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Message area */
+.chatbot-messages {
+    flex-grow: 1; /* Allow this area to take available space */
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling for overflowed messages */
+    height: calc(100% - 150px); /* Dynamically calculate height, leaving space for header & input */
+}
+
+/* Input area */
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.chatbot-input input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;  /* Ensure proper font size for visibility */
+    border: none;
+    outline: none;
+    height: 40px; /* Set input box height */
+    resize: none;
+    box-sizing: border-box; /* Ensure the padding doesn’t affect the input size */
+}
+
+/* Button styles */
+.chatbot-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Message styles */
+.message {
+    margin-bottom: 10px;
+}
+
+.message.bot {
+    color: #007bff;
+}
+
+.message.user {
+    color: #333;
+    text-align: right;
+}
+
+/* Placeholder styling for input field */
+.chatbot-input input::placeholder {
+    color: #aaa;
+}
+/* Modal Background */
+#modal {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Modal Content */
+.bg-white {
+    background-color: white;
+}
+
+/* Text Gradient Effect */
+.text-gradient {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Modal Animation (Smooth Fade-In) */
+.modal-enter {
+    opacity: 0;
+    transform: scale(0);
+}
+#modal:not(.hidden) .modal-enter {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+/* Input and textarea elements */
+input, textarea {
+    color: #333; /* Set text color to dark gray for visibility */
+    background-color: #fff; /* Ensure background is white */
+}
+
+/* Item Name and Description Input Fields */
+input[type="text"], textarea {
+    color: #333; /* Ensure text is dark */
+    background-color: #fff; /* Ensure white background for input fields */
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Labels */
+label {
+    color: #333; /* Ensure label text is dark */
+}
+
+/* Focus effect on input fields */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border when focused */
+}
+
+/* Placeholder Styling */
+input::placeholder, textarea::placeholder {
+    color: #aaa; /* Light color for placeholder text */
+}
+
+/* Button styles */
+button {
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Cancel Button */
+.bg-gray-500 {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Submit Button */
+.bg-blue-500 {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Location Button Hover */
+#locationButton:hover {
+    background-color: #2f855a; /* Darker green on hover */
+    transform: scale(1.05); /* Zoom effect on hover */
+}
